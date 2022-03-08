@@ -53,7 +53,7 @@ def order_deadline(db :Session =Depends(get_db)):
      return task_cred.get_deadline_task(db) 
 
 
-@app.get("/task/sersh")
+@app.get("/task/sersh{task}")
 def  search_all_taskes(db :Session =Depends(get_db)):
      return task_cred.searsh_task(db)     
 

@@ -45,8 +45,8 @@ def get_deadline_task(db:Session):
      return db.query(models.Task).order_by(models.Task.deadline).all()
 
 
-def searsh_task(db:Session):
-     return db.query(models.Task.id).filter(models.Task.id).all()       
+def searsh_task( task ,db:Session):
+     return db.query(models.Task).filter(models.Task.title==task).all()       
 
 
      
